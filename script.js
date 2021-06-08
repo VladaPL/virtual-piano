@@ -12,7 +12,8 @@ keys.forEach((key) => {
 function playAudio(event) {
   /* нужно узнать по какой клавише кликнули.
     Свойство target является ссылкой на объект, который был инициатором события*/
-  let key = event.target;
+  let key =
+    event.target; /* key помечен как элемент на котором произошло событие */
   let sound = document.getElementById(key.dataset.note);
   key.classList.add(
     "active"
@@ -26,27 +27,11 @@ function playAudio(event) {
 
 /* SOUND - KEYDOWN */
 
-/*const pianoKeys = document.querySelectorAll(".piano-key");
-
-pianoKeys.forEach((pianoKey) => {
-  pianoKey.addEventListener('keydown', playNote);
-});*/
-
-/*function playNote(event) {
-  let pianoKey = event.target;
-  let note = document.getElementById(pianoKey.dataset.note);
-  pianoKey.classList.add("active"); 
-  note.currentTime = 0;
-  note.play();
-  note.addEventListener("ended", () => {
-    pianoKey.classList.remove("active");
-  });
-}*/
-
-window.addEventListener("keydown", function (e) {
-  const audio = document.querySelector(`audio[data-keyNote="68"]`);
-  if (!audio) return;
-  audio.play();
+window.addEventListener("keydown", function (e) { // 1) при совершении собятия нажатия кнопки,
+  const audio = document.querySelector(`audio[data-keyNote="${e.code}"]`); // 2) если кнопка соответствует по data-keyNote тегу аудио, то
+  if (!audio) return; // 4) если не соответствует -> stop the function
+  audio.play(); // 3) проигрывается звук.
 });
+
 
 /* ADD BUTTON LETTER/NOTE */
