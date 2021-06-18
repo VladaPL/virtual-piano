@@ -15,7 +15,7 @@ body {
   background-color: #313940;
   font-family: "Open Sans", Arial, Helvetica, sans-serif;
   overflow-x: hidden;
-  background-image: url(/assets/svg/piano-img.jpg);
+  background-image: url(/img/piano-img.jpg);
   background-repeat: no-repeat;
   background-size: 100%;
 }
