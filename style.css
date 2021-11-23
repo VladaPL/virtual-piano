@@ -15,9 +15,10 @@ body {
   background-color: #313940;
   font-family: "Open Sans", Arial, Helvetica, sans-serif;
   overflow-x: hidden;
-  background-image: url(piano-img.jpg);
+  background-image: url(images/piano-img.jpg);
   background-repeat: no-repeat;
   background-size: 100%;
+  background-position: center;
 }
 .header {
   text-align: center;
